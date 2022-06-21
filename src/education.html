@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="education.js" type="module"></script>
+    <title>Education</title>
+</head>
+<body>
+    <header>
+        <script id="nav-bar" src="nav.js"></script>
+    </header>
+    <div id="education">
+        <div class="container">
+            <section>
+                <h2>DePauw University</h2>
+                <p>
+                    I graduated from DePauw University in 2015 with double majors in Computer Science and Economics. DePauw is a liberal art college located in Greencastle, IN.
+                    During the time here, I learned not only about the academic subjects in the classes, but also about the American culture, and made valuable relationships. Every memory I have here is beautiful and irreplaceable.
+                    The small college town will forever stay in my heart.<br><br>
+
+                    Here is a picture of my pretty school:
+                </p>
+                <img class="pictures" :src="depauw_image" @mouseover="updateDepauw()" @mouseleave="resetDepauw()" alt="DePauw University" title="DePauw Universtiy"/>
+            </section>
+            <hr class="solid">
+            <section>
+                <h2>Boston University</h2>
+                <p>
+                    Working at AWS isn't busy enough, I'm currently studying for my MS Computer Information System at Boston University.
+                    My decision to pursue a higher degree was largely thanks to the pandemic, during which I hardly had any social interaction or traveling plans.<br><br>
+
+                    Here is a picture of the school, which I've never been to (hopefully will be someday):
+                </p>
+                <img class="pictures" :src="boston_image" @mouseover="updateBoston()" @mouseleave="resetBoston()" alt="Boston University" title="Boston University"/>
+                <hr class="solid">
+                <p>
+                    Here are the lists of class I have accomplished so far in the program, I mostly do this to show how good I'm at using table tag in html &#128513;
+                </p>
+                <input type="button" class="styled-button" value="Load classes" @click="loadData"/>
+                <div id="dataTable" class="styled-table"></div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        &copy; 2022 Boston University
+    </footer>
+</body>
+</html>

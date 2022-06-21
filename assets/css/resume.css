@@ -1,0 +1,9 @@
+.contact-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.contact-box > div {
+    width: 25%;
+}

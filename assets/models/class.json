@@ -1,0 +1,20 @@
+[
+  {
+    "course": "CS 520",
+    "name": "Information Structures with Java",
+    "term": "2021 Fall",
+    "grade": 4.0
+  },
+  {
+    "course": "CS 625",
+    "name": "Business Data Communication and Networks",
+    "term": "2022 Spring",
+    "grade": 4.0
+  },
+  {
+    "course": "CS 669",
+    "name": "Database Design and Implementation for Business ",
+    "term": "2022 Spring",
+    "grade": 4.0
+  }
+]

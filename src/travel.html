@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="travel.js" type="module"></script>
+    <title>Traveling</title>
+</head>
+<body>
+    <header>
+        <script id="nav-bar" src="nav.js"></script>
+    </header>
+    <div class="container">
+        <h2>Countries I have been to</h2>
+        <div class="content">
+            <div>
+                <h3>Japan</h3>
+                <div>
+                    <p>
+                        Japan is where I have met the most kind and polite people. The country has more than 2000 years of history has gone through many up and down, and the Japanese are proud of that.
+                        Blending with the modern and advanced technology, the long history culture still remains intact with its own elegance and beauty.
+                    </p>
+                </div>
+                <div class="hover-container">
+                    <img class="image" src="../assets/pics/japan.jpg" alt="Japan flag">
+                    <div class="overlay">
+                        <div class="text">Capital: Tokyo <br>
+                            Population: 125.8 million (2020) <br>
+                            Currency: Japanese Yen (&#165;)</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>Singapore</h3>
+                <div>
+                    <p>
+                        A gem in the middle of South East Asia. As a fellow from Vietnam, I'm both jealous and admired what Singapore has achieved in such a short period of time.
+                        They are one of the most developed and modern nation in the world with the area of only 281.3 mi² (only 0.18% the size of California!)
+                    </p>
+                </div>
+                <div class="hover-container">
+                    <img class="image" src="../assets/pics/singapore.jpg" alt="Singapore flag">
+                    <div class="overlay">
+                        <div class="text">Capital: Singapore <br>
+                            Population: 5.686 million (2020) <br>
+                            Currency: Singapore Dollar (&#36;)</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>Malaysia</h3>
+                <div>
+                    <p>
+                        Malaysia is a rich cultured country with friendly and hardworking people. The capital city, Kuala Lumpur, has many skyscrapers and a modern monorail system.
+                        I was blown away by how clean and developed the city is, even though it is just couple of hours of flight from hometown. The country is on its course to achieve high income status between 2024 and 208 according to World Bank.
+                    </p>
+                </div>
+                <div class="hover-container">
+                    <img class="image" src="../assets/pics/malaysia.jpg" alt="Malaysia flag">
+                    <div class="overlay">
+                        <div class="text">Capital: Kuala Lumpur <br>
+                            Population: 32.37 million (2020) <br>
+                            Currency: Malaysian Ringgit (RM)</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>Mexico</h3>
+                <div>
+                    <p>
+                        Mexico - our neighbor down south is a beautiful country. This is my most recent trip after the pandemic.
+                        Going from the cold and rainy Seattle to the warmer weather and people of Mexico was a pleasant change of pace.
+                        Everything about this country made me want to revisit it again in the future.
+                    </p>
+                </div>
+                <div class="hover-container">
+                    <img class="image" src="../assets/pics/mexico.jpg" alt="Mexico flag">
+                    <div class="overlay">
+                        <div class="text">Capital: Mexico City <br>
+                            Population: 128.9 million (2020) <br>
+                            Currency: Mexican Peso (&#8369;)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="country">
+            <input type="text" v-model="input" @keyup="searchInput" placeholder="Country or Capital search..." size="23"/>
+<!--                Hide table if there is no result-->
+            <table v-if="result.countryName" class="styled-table">
+                <tr>
+                    <td>Country Name</td>
+                    <td>{{result.countryName}}</td>
+                </tr>
+                <tr>
+                    <td>Capital</td>
+                    <td>{{result.capital}}</td>
+                </tr>
+                <tr>
+                    <td>Population</td>
+                    <td>{{result.population}}</td>
+                </tr>
+                <tr>
+                    <td>Currency Code</td>
+                    <td>{{result.currencyCode}}</td>
+                </tr>
+                <tr>
+                    <td>Continent Name</td>
+                    <td>{{result.continentName}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+        &copy; 2022 Boston University
+    </footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="contact.js" defer></script>
+    <title>Contact me</title>
+</head>
+<body>
+    <header>
+        <script id="nav-bar" src="nav.js"></script>
+    </header>
+    <div class="container">
+        <h2>Contact Me</h2>
+        <div class="successMsg" id="successMessage"></div>
+        <div class="errorMsg" id="failureMessage"></div>
+        <form id="form" name="mainForm">
+<!--            Key to send email through web3forms-->
+            <input type="hidden" name="access_key" value="fc6c63aa-6986-48b2-a0ec-ac1e76217687">
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="firstName">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="firstName" name="firstName" placeholder="John">
+                    <div class="errorMsg" id="firstNameError"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lastName">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lastName" name="lastName" placeholder="Doe">
+                    <div class="errorMsg" id="lastNameError"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="email" name="email" placeholder="you@company.com">
+                    <div class="errorMsg" id="emailError"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="phone">Phone Number</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="phone" name="phone" placeholder="+1 (888) 8888-888">
+                    <div class="errorMsg" id="phoneError"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="message">Your Message</label>
+                </div>
+                <div class="col-75">
+                    <textarea rows="5" id="message" name="message" placeholder="Your message"></textarea>
+                    <div class="errorMsg" id="messageError"></div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <footer>
+        &copy; 2022 Boston University
+    </footer>
+</body>
+</html>
